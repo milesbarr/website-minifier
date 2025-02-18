@@ -1,0 +1,42 @@
+[tool.black]
+line-length = 79
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wesbite-minifier"
+version = "1.0.0"
+description = "A Python package to minify website assets."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Miles Barr" }
+]
+dependencies = [
+    "beautifulsoup4"
+]
+keywords = ["website", "minifier", "minify", "minification", "html", "css",
+    "xml", "json"]
+
+classifiers = [
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+
+[project.scripts]
+minifier = "minifier.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/milesbarr/website-minifier"
+
+[tool.setuptools]
+packages = ["minifier"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
